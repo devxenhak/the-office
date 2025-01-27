@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunder Mifflin</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: url('https://whimsysoul.com/wp-content/uploads/2020/02/Whimsy-Soul-Dunder-Mifflin-The-Office-3.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .employees {
+            margin: 40px 0;
+        }
+
+        .employees img {
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .employees img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">Welcome to Dunder Mifflin</div>
+    <section class="employees">
+        <h2>Meet the Team</h2>
+        <img src="https://www.lifeandstylemag.com/wp-content/uploads/2016/09/The-Office-WATN.jpg?fit=3300%2C2240&quality=86&strip=all" alt="The Office US Cast">
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hero = document.querySelector(".hero");
+            hero.style.opacity = 0;
+            hero.style.transform = "translateY(-20px)";
+            setTimeout(() => {
+                hero.style.transition = "all 0.8s ease-out";
+                hero.style.opacity = 1;
+                hero.style.transform = "translateY(0)";
+            }, 300);
+        });
+    </script>
+</body>
+
+</html>
